@@ -5,12 +5,34 @@ body {
     padding: 40px;
 }
 
+/* === Container === */
 .changelog {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
+    padding: 24px;
+}
+
+/* === Item === */
+.changelog-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* === Tipe-Tipe Update === */
+.fitur {
+    background-color: #e0f2fe;
+}
+
+.bug {
+    background-color: #fcdede;
+}
+
+.tampilan {
+    background-color: #fef9c3;
 }
 
 .item {
