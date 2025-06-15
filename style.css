@@ -1,59 +1,86 @@
+/* ====== Google Font ====== */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f9fafb;
-    color: #111827;
-    padding: 40px;
+    color: #1f2937;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-/* === Container === */
-.changelog {
+/* ====== Container Utama ====== */
+.container {
     max-width: 600px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    padding: 20px;
 }
 
-/* === Item === */
+/* ====== Judul ====== */
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 28px;
+}
+
+/* ====== Item Changelog ====== */
 .changelog-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     padding: 16px;
+    margin-bottom: 16px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
 }
 
-/* === Icon === */
+.changelog-item:hover {
+    transform: scale(1.01);
+}
+
+/* ====== Ikon Emoji ====== */
 .icon {
     font-size: 20px;
+    margin-top: 4px;
 }
 
-/* === Tipe-Tipe Update === */
+/* ====== Warna Berdasarkan Tipe ====== */
 .fitur {
     background-color: #e0f2fe;
+    /* Biru muda */
+    border-left: 4px solid #38bdf8;
 }
 
 .bug {
     background-color: #fcdede;
+    /* Merah muda */
+    border-left: 4px solid #f87171;
 }
 
 .tampilan {
     background-color: #fef9c3;
+    /* Kuning muda */
+    border-left: 4px solid #facc15;
 }
 
+.konten {
+    background-color: #ede9fe;
+    /* Ungu muda */
+    border-left: 4px solid #a78bfa;
+}
 
-@media (max-width: 600px) {
-    body {
-        padding: 20px;
+/* ====== Responsif Mobile ====== */
+@media (max-width: 480px) {
+    .changelog-item {
+        flex-direction: column;
+        gap: 8px;
     }
 
-    .item {
-        flex-direction: column;
-        align-items: flex-start;
+    h1 {
+        font-size: 24px;
     }
 
     .icon {
-        margin-bottom: 6px;
+        font-size: 18px;
     }
 }
